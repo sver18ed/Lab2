@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA4429B62372F27300617185 /* ExperienceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4429B52372F27300617185 /* ExperienceTableViewController.swift */; };
+		BA4429B8237311EA00617185 /* ExperienceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4429B7237311EA00617185 /* ExperienceCell.swift */; };
 		BA8E4046236C13F000BBED38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8E4045236C13F000BBED38 /* AppDelegate.swift */; };
 		BA8E4048236C13F000BBED38 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8E4047236C13F000BBED38 /* SceneDelegate.swift */; };
 		BA8E404A236C13F000BBED38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8E4049236C13F000BBED38 /* ViewController.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA4429B52372F27300617185 /* ExperienceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceTableViewController.swift; sourceTree = "<group>"; };
+		BA4429B7237311EA00617185 /* ExperienceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceCell.swift; sourceTree = "<group>"; };
 		BA8E4042236C13F000BBED38 /* Lab2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lab2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA8E4045236C13F000BBED38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA8E4047236C13F000BBED38 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 				BA8E4047236C13F000BBED38 /* SceneDelegate.swift */,
 				BA8E4049236C13F000BBED38 /* ViewController.swift */,
 				BA8E404B236C13F000BBED38 /* Main.storyboard */,
+				BA4429B7237311EA00617185 /* ExperienceCell.swift */,
+				BA4429B52372F27300617185 /* ExperienceTableViewController.swift */,
 				BA8E404E236C13F200BBED38 /* Assets.xcassets */,
 				BA8E4050236C13F200BBED38 /* LaunchScreen.storyboard */,
 				BA8E4053236C13F200BBED38 /* Info.plist */,
@@ -259,7 +265,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA4429B8237311EA00617185 /* ExperienceCell.swift in Sources */,
 				BA8E404A236C13F000BBED38 /* ViewController.swift in Sources */,
+				BA4429B62372F27300617185 /* ExperienceTableViewController.swift in Sources */,
 				BA8E4046236C13F000BBED38 /* AppDelegate.swift in Sources */,
 				BA8E4048236C13F000BBED38 /* SceneDelegate.swift in Sources */,
 			);
