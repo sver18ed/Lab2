@@ -17,6 +17,8 @@
 		BA8E4052236C13F200BBED38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA8E4050236C13F200BBED38 /* LaunchScreen.storyboard */; };
 		BA8E405D236C13F200BBED38 /* Lab2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8E405C236C13F200BBED38 /* Lab2Tests.swift */; };
 		BA8E4068236C13F200BBED38 /* Lab2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8E4067236C13F200BBED38 /* Lab2UITests.swift */; };
+		BAC3A9742374645300623A81 /* Experience.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC3A9732374645300623A81 /* Experience.swift */; };
+		BAC3A9762374835F00623A81 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC3A9752374835F00623A81 /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		BA8E4063236C13F200BBED38 /* Lab2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Lab2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA8E4067236C13F200BBED38 /* Lab2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lab2UITests.swift; sourceTree = "<group>"; };
 		BA8E4069236C13F200BBED38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAC3A9732374645300623A81 /* Experience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Experience.swift; sourceTree = "<group>"; };
+		BAC3A9752374835F00623A81 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +111,10 @@
 				BA8E4047236C13F000BBED38 /* SceneDelegate.swift */,
 				BA8E4049236C13F000BBED38 /* ViewController.swift */,
 				BA8E404B236C13F000BBED38 /* Main.storyboard */,
+				BAC3A9752374835F00623A81 /* DetailsViewController.swift */,
 				BA4429B7237311EA00617185 /* ExperienceCell.swift */,
 				BA4429B52372F27300617185 /* ExperienceTableViewController.swift */,
+				BAC3A9732374645300623A81 /* Experience.swift */,
 				BA8E404E236C13F200BBED38 /* Assets.xcassets */,
 				BA8E4050236C13F200BBED38 /* LaunchScreen.storyboard */,
 				BA8E4053236C13F200BBED38 /* Info.plist */,
@@ -268,6 +274,8 @@
 				BA4429B8237311EA00617185 /* ExperienceCell.swift in Sources */,
 				BA8E404A236C13F000BBED38 /* ViewController.swift in Sources */,
 				BA4429B62372F27300617185 /* ExperienceTableViewController.swift in Sources */,
+				BAC3A9742374645300623A81 /* Experience.swift in Sources */,
+				BAC3A9762374835F00623A81 /* DetailsViewController.swift in Sources */,
 				BA8E4046236C13F000BBED38 /* AppDelegate.swift in Sources */,
 				BA8E4048236C13F000BBED38 /* SceneDelegate.swift in Sources */,
 			);

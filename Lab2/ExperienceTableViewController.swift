@@ -10,37 +10,49 @@ import UIKit
 
 class ExperienceTableViewController: UITableViewController {
     
-    let section = ["Work", "Education"]
+    let sections = ["Work", "Education"]
     let items = [["Work 1", "Work 2", "Work 3"], ["Education 1"]]
     let years = [["2013 - 2014", "2014 - 2017", "2017 - 2018"], ["2018 - current"]]
     let images = [["gamecontroller.fill", "car.fill", "burn"], ["book"]]
-
+    
+    //var experiences: [[Experience]] = [[]]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        //        for section in 0..<self.sections.count {
+        //            var object: [Experience] = []
+        //            for item in 0..<self.items[section].count {
+        //                let experience = Experience(section: sections[section], item: items[section][item], year: years[section][item], image: images[section][item], description: "default")
+        //                object.append(experience)
+        //            }
+        //            experiences.append(object)
+        //            // Uncomment the following line to preserve selection between presentations
+        //            // self.clearsSelectionOnViewWillAppear = false
+        //
+        //            // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        //            // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        //        }
+        //tableView.reloadData()
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return self.section.count
+        return self.sections.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return self.items[section].count
     }
-
+    
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return self.section[section]
+        return self.sections[section]
     }
-
+    
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath) as? ExperienceCell {
             
@@ -55,17 +67,23 @@ class ExperienceTableViewController: UITableViewController {
         return UITableViewCell()
     }
     
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        self.performSegue(withIdentifier: "toDetailViewSegue", sender: self)
-//    }
-
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        let indexPath = tableView.indexPathForSelectedRow;
-//        let cellname = tableView.cellForRowAtIndexPath(indexPath!) as! CardTableViewCell;
-//        let DetailViewController = segue.destinationViewController
-//        DetailViewController.title = cellname.textLabel?.text
-//    }
+    //override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    //self.performSegue(withIdentifier: "toDetailViewSegue", sender: self)
+    //}
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as? DetailsViewController
+        let indexPathForRow = tableView.indexPathForSelectedRow?.row;
+        let indexPathForSection = tableView.indexPathForSelectedRow?.section;
+        
+        destination?.image = self.images[indexPathForSection!][indexPathForRow!]
+        destination?.work = self.items[indexPathForSection!][indexPathForRow!]
+        destination?.year = self.years[indexPathForSection!][indexPathForRow!]
+        
+        //let cellname = tableView.cellForRowAtIndexPath(indexPath!) as! CardTableViewCell;
+        //let destinationViewController = segue.detailsViewController
+        //destinationViewController.title = cellname.textLabel?.text
+    }
     
     /*
      // Override to support conditional editing of the table view.

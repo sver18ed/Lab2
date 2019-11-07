@@ -42,7 +42,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="7MU-oh-tFs" firstAttribute="centerY" secondItem="eLG-8X-VUp" secondAttribute="centerY" id="3TA-Bx-ZOt"/>
                                     <constraint firstItem="7MU-oh-tFs" firstAttribute="leading" secondItem="eLG-8X-VUp" secondAttribute="leading" constant="20" id="62b-6E-Cln"/>
@@ -172,7 +172,7 @@
                                     <outlet property="coverImageView" destination="UKP-sy-PzR" id="r0w-xR-2Wm"/>
                                     <outlet property="titleLabel" destination="MgG-Nt-YYM" id="3Cq-ZC-CyH"/>
                                     <outlet property="yearLabel" destination="IbG-cC-AK0" id="oZU-ln-gPT"/>
-                                    <segue destination="v6U-2O-f0b" kind="show" id="eKN-B0-HQ5"/>
+                                    <segue destination="v6U-2O-f0b" kind="show" identifier="toDetailViewSegue" id="eKN-B0-HQ5"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -190,15 +190,65 @@
         <!--Details-->
         <scene sceneID="hjl-Dz-tF6">
             <objects>
-                <viewController id="v6U-2O-f0b" sceneMemberID="viewController">
+                <viewController id="v6U-2O-f0b" customClass="DetailsViewController" customModule="Lab2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qkz-f6-1sx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jFx-4P-orj">
+                                <rect key="frame" x="90" y="108" width="234" height="125"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="JNE-zr-ttJ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="inh-Uc-zI4">
+                                <rect key="frame" x="20" y="271" width="374" height="22"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WhB-eB-Cv1">
+                                <rect key="frame" x="20" y="301" width="374" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="dCm-WO-7id"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jec-ut-zCa">
+                                <rect key="frame" x="20" y="342" width="374" height="203"/>
+                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <accessibility key="accessibilityConfiguration" identifier="toDetailViewSegue"/>
+                        <constraints>
+                            <constraint firstItem="jFx-4P-orj" firstAttribute="leading" secondItem="Ew0-AZ-8QA" secondAttribute="leading" constant="90" id="5tA-IN-E7S"/>
+                            <constraint firstAttribute="trailing" secondItem="jec-ut-zCa" secondAttribute="trailing" constant="20" id="ByH-Q9-Y9c"/>
+                            <constraint firstItem="jec-ut-zCa" firstAttribute="leading" secondItem="Ew0-AZ-8QA" secondAttribute="leading" constant="20" id="EBG-Fg-Xwp"/>
+                            <constraint firstItem="Ew0-AZ-8QA" firstAttribute="trailing" secondItem="WhB-eB-Cv1" secondAttribute="trailing" constant="20" id="KRW-hI-FBM"/>
+                            <constraint firstItem="WhB-eB-Cv1" firstAttribute="leading" secondItem="Ew0-AZ-8QA" secondAttribute="leading" constant="20" id="QKa-3R-pM9"/>
+                            <constraint firstItem="Ew0-AZ-8QA" firstAttribute="trailing" secondItem="inh-Uc-zI4" secondAttribute="trailing" constant="20" id="d2M-dx-sGj"/>
+                            <constraint firstItem="jFx-4P-orj" firstAttribute="top" secondItem="Ew0-AZ-8QA" secondAttribute="top" constant="20" id="gqi-Fw-l1p"/>
+                            <constraint firstItem="WhB-eB-Cv1" firstAttribute="top" secondItem="inh-Uc-zI4" secondAttribute="bottom" constant="8" id="kEz-wJ-9n0"/>
+                            <constraint firstItem="jec-ut-zCa" firstAttribute="top" secondItem="WhB-eB-Cv1" secondAttribute="bottom" constant="20" id="nMO-dH-R2G"/>
+                            <constraint firstItem="inh-Uc-zI4" firstAttribute="leading" secondItem="Ew0-AZ-8QA" secondAttribute="leading" constant="20" id="oa6-cd-vpQ"/>
+                            <constraint firstItem="inh-Uc-zI4" firstAttribute="bottom" secondItem="jFx-4P-orj" secondAttribute="bottom" constant="60" id="qwm-8T-CIH"/>
+                            <constraint firstItem="Ew0-AZ-8QA" firstAttribute="trailing" secondItem="jFx-4P-orj" secondAttribute="trailing" constant="90" id="xZv-my-7h2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Ew0-AZ-8QA"/>
                     </view>
                     <navigationItem key="navigationItem" title="Details" id="i7q-ID-cl8"/>
+                    <connections>
+                        <outlet property="coverImageView" destination="jFx-4P-orj" id="uan-5O-aia"/>
+                        <outlet property="titleLabel" destination="inh-Uc-zI4" id="GBG-dr-Xe9"/>
+                        <outlet property="yearLabel" destination="WhB-eB-Cv1" id="bOv-L1-s8X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rtf-PL-qpH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
