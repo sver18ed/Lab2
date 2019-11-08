@@ -13,6 +13,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var coverImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var yearLabel: UILabel!
+    @IBOutlet weak var infoLabel: UILabel!
     
     var work = String()
     var year = String()
@@ -25,6 +26,7 @@ class DetailsViewController: UIViewController {
         coverImageView.image = UIImage(systemName: image)
         titleLabel.text = work
         yearLabel.text = year
+        infoLabel.text = information
     }
 
     override func viewDidLoad() {

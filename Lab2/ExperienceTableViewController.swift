@@ -14,26 +14,12 @@ class ExperienceTableViewController: UITableViewController {
     let items = [["Work 1", "Work 2", "Work 3"], ["Education 1"]]
     let years = [["2013 - 2014", "2014 - 2017", "2017 - 2018"], ["2018 - current"]]
     let images = [["gamecontroller.fill", "car.fill", "burn"], ["book"]]
+    let information = ["Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."]
     
-    //var experiences: [[Experience]] = [[]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //        for section in 0..<self.sections.count {
-        //            var object: [Experience] = []
-        //            for item in 0..<self.items[section].count {
-        //                let experience = Experience(section: sections[section], item: items[section][item], year: years[section][item], image: images[section][item], description: "default")
-        //                object.append(experience)
-        //            }
-        //            experiences.append(object)
-        //            // Uncomment the following line to preserve selection between presentations
-        //            // self.clearsSelectionOnViewWillAppear = false
-        //
-        //            // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        //            // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        //        }
-        //tableView.reloadData()
     }
     
     // MARK: - Table view data source
@@ -79,10 +65,8 @@ class ExperienceTableViewController: UITableViewController {
         destination?.image = self.images[indexPathForSection!][indexPathForRow!]
         destination?.work = self.items[indexPathForSection!][indexPathForRow!]
         destination?.year = self.years[indexPathForSection!][indexPathForRow!]
+        destination?.information = self.information[0]
         
-        //let cellname = tableView.cellForRowAtIndexPath(indexPath!) as! CardTableViewCell;
-        //let destinationViewController = segue.detailsViewController
-        //destinationViewController.title = cellname.textLabel?.text
     }
     
     /*
