@@ -33,7 +33,7 @@ class SkillsViewController: UIViewController {
         //remove current constraint
         self.removeAnimationViewYPositionConstraint()
         let hideConstraint = NSLayoutConstraint(item: self.animationView as Any,
-                                                attribute: .bottom,
+            attribute: .bottom,
             relatedBy: .equal,
             toItem: self.view,
             attribute: .top,
@@ -49,7 +49,7 @@ class SkillsViewController: UIViewController {
         //remove current constraint
         self.removeAnimationViewYPositionConstraint()
         let centerYConstraint = NSLayoutConstraint(item: self.animationView as Any,
-                                                   attribute: .centerY,
+            attribute: .centerY,
             relatedBy: .equal,
             toItem: self.view,
             attribute: .centerY,
